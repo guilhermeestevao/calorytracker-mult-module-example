@@ -17,9 +17,8 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import dev.guilhermeestevao.core_ui.LocalSpacing
 
-
 @Composable
-fun selectableButton(
+fun SelectableButton(
     text: String,
     isSelected: Boolean,
     color: Color,
@@ -30,7 +29,7 @@ fun selectableButton(
 ){
     Box(
         contentAlignment = Alignment.Center,
-        modifier = Modifier
+        modifier = modifier
             .clip(RoundedCornerShape(100.dp))
             .border(
                 width = 2.dp,
