@@ -15,8 +15,12 @@ import com.plcoding.calorytracker.navigation.navigate
 import com.plcoding.calorytracker.ui.theme.CaloryTrackerTheme
 import dagger.hilt.android.AndroidEntryPoint
 import dev.guilhermeestevao.core.navigation.Route
+import dev.guilhermeestevao.onboarding_presentation.activity.ActivityScreen
 import dev.guilhermeestevao.onboarding_presentation.age.AgeScreen
 import dev.guilhermeestevao.onboarding_presentation.gender.GenderScreen
+import dev.guilhermeestevao.onboarding_presentation.goal.GoalScreen
+import dev.guilhermeestevao.onboarding_presentation.height.HeightScreen
+import dev.guilhermeestevao.onboarding_presentation.weight.WeightScreen
 import dev.guilhermeestevao.onboarding_presentation.welcome.WelcomeScreen
 
 @AndroidEntryPoint
@@ -48,19 +52,25 @@ class MainActivity : ComponentActivity() {
                             GenderScreen(onNavigate = navController::navigate)
                         }
                         composable(Route.HEIGHT){
-
+                            HeightScreen(
+                                scaffoldState = scaffoldState,
+                                onNavigate = navController::navigate
+                            )
                         }
                         composable(Route.WEIGHT){
-
+                            WeightScreen(
+                                scaffoldState = scaffoldState,
+                                onNavigate = navController::navigate
+                            )
                         }
                         composable(Route.NUTRIENT_GOAL){
 
                         }
                         composable(Route.ACTIVITY){
-
+                            ActivityScreen(onNavigate = navController::navigate)
                         }
                         composable(Route.GOAL){
-
+                            GoalScreen(onNavigate = navController::navigate)
                         }
                         composable(Route.TRACKER_OVERVIEW){
 
