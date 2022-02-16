@@ -34,7 +34,7 @@ android {
 
 dependencies {
     kapt DaggerHilt.hiltCompiler
-      DaggerHilt.hiltAndroid
+    implementation DaggerHilt.hiltAndroid
 
     testImplementation Testing.junit4
     testImplementation Testing.junitAndroidExt

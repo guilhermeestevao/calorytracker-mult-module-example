@@ -20,6 +20,7 @@ import dev.guilhermeestevao.onboarding_presentation.age.AgeScreen
 import dev.guilhermeestevao.onboarding_presentation.gender.GenderScreen
 import dev.guilhermeestevao.onboarding_presentation.goal.GoalScreen
 import dev.guilhermeestevao.onboarding_presentation.height.HeightScreen
+import dev.guilhermeestevao.onboarding_presentation.nutrient_goal.NutrientGoalScreen
 import dev.guilhermeestevao.onboarding_presentation.weight.WeightScreen
 import dev.guilhermeestevao.onboarding_presentation.welcome.WelcomeScreen
 
@@ -64,7 +65,10 @@ class MainActivity : ComponentActivity() {
                             )
                         }
                         composable(Route.NUTRIENT_GOAL){
-
+                            NutrientGoalScreen(
+                                scaffoldState = scaffoldState,
+                                onNavigate = navController::navigate
+                            )
                         }
                         composable(Route.ACTIVITY){
                             ActivityScreen(onNavigate = navController::navigate)
