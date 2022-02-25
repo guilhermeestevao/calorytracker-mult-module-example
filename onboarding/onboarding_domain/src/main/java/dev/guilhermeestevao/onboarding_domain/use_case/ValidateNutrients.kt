@@ -14,12 +14,12 @@ class ValidateNutrients {
         val fatRatio = fatRatioText.toFloatOrNull()
         if(carbsRatio == null || proteinRatio == null || fatRatio == null){
             return Result.Error(
-                message = UiText.StringResoruce(R.string.error_invalid_values)
+                message = UiText.StringResource(R.string.error_invalid_values)
             )
         }
         if(carbsRatio+proteinRatio+fatRatio != 100f){
             return Result.Error(
-                message = UiText.StringResoruce(R.string.error_not_100_percent)
+                message = UiText.StringResource(R.string.error_not_100_percent)
             )
         }
 

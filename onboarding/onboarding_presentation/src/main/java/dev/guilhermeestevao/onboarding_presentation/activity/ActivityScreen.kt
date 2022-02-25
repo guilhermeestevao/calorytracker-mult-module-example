@@ -15,7 +15,6 @@ import dev.guilhermeestevao.core.util.UiEvent
 import dev.guilhermeestevao.core_ui.LocalSpacing
 import dev.guilhermeestevao.core.R
 import dev.guilhermeestevao.core.domain.model.ActivityLevel
-import dev.guilhermeestevao.core.domain.model.Gender
 import dev.guilhermeestevao.onboarding_presentation.components.ActionButton
 import dev.guilhermeestevao.onboarding_presentation.components.SelectableButton
 import kotlinx.coroutines.flow.collect
@@ -65,11 +64,11 @@ fun ActivityScreen(
                 Spacer(modifier = Modifier.width(spacing.spaceMidium))
                 SelectableButton(
                     text = stringResource(id = R.string.medium),
-                    isSelected = viewModel.selectedActivityLevel is ActivityLevel.Medim,
+                    isSelected = viewModel.selectedActivityLevel is ActivityLevel.Medium,
                     color = MaterialTheme.colors.primaryVariant,
                     selectedTextColor = Color.White,
                     onClick = {
-                        viewModel.onActivityLevelSelected(ActivityLevel.Medim)
+                        viewModel.onActivityLevelSelected(ActivityLevel.Medium)
                     },
                     textStyle = MaterialTheme.typography.button.copy(
                         fontWeight = FontWeight.Normal

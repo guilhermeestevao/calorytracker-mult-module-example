@@ -23,6 +23,7 @@ import dev.guilhermeestevao.onboarding_presentation.height.HeightScreen
 import dev.guilhermeestevao.onboarding_presentation.nutrient_goal.NutrientGoalScreen
 import dev.guilhermeestevao.onboarding_presentation.weight.WeightScreen
 import dev.guilhermeestevao.onboarding_presentation.welcome.WelcomeScreen
+import dev.guilhermeestevao.tracker_presentation.tracker_overview.TrackerOverviewScreen
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
@@ -77,7 +78,7 @@ class MainActivity : ComponentActivity() {
                             GoalScreen(onNavigate = navController::navigate)
                         }
                         composable(Route.TRACKER_OVERVIEW){
-
+                            TrackerOverviewScreen(onNavigate = navController::navigate)
                         }
                         composable(Route.SEARCH){
 

@@ -40,7 +40,7 @@ class AgeViewModel @Inject constructor(
         viewModelScope.launch {
             val ageNumber = age.toIntOrNull() ?: kotlin.run {
                 _uiEvent.send(
-                    UiEvent.ShowSnackbar(UiText.StringResoruce(R.string.error_age_cant_be_empty))
+                    UiEvent.ShowSnackbar(UiText.StringResource(R.string.error_age_cant_be_empty))
                 )
                 return@launch
             }

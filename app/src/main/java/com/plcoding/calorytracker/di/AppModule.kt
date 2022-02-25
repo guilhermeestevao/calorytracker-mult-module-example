@@ -7,7 +7,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import dev.guilhermeestevao.core.data.preferences.DefaultPreferences
+import dev.guilhermeestevao.core.domain.preferences.DefaultPreferences
 import dev.guilhermeestevao.core.domain.preferences.Preferences
 import dev.guilhermeestevao.core.domain.use_case.FilterOutDigits
 import javax.inject.Singleton
